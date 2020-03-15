@@ -21,13 +21,16 @@ class Callback extends Component {
   componentDidMount () {
     if (this.props.location.hash || this.props.location.search) {
       this.props.initSessionFromCallbackURI(window.location.href)
+      console.log("message from callback.js")
+      window.location.href="http://1950386css436prog3.s3-website-us-west-2.amazonaws.com"
     }
   }
 
-  render () {
+  render() {
     // If there's no auth code in the URL or we're now logged into, redirect to the root page
     if ((!this.props.location.hash && !this.props.location.search) || this.props.session.isLoggedIn) {
-      return <Redirect to="/" />
+      return <Redirect to="/views/leaderboard.html" />
+       //return <Redirect to="/" />
     }
 
     return <div />

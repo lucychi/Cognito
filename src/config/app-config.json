@@ -1,9 +1,9 @@
 {
-    "region": "eu-west-2",
-    "userPool": "eu-west-2_z1Go5XdrZ",
-    "userPoolBaseUri": "https://auth-cognito-demo.arronharden.com",
-    "clientId": "4tnp4k64d5v4ah9dud3pj1kbs0",
-    "callbackUri": "https://cognito-demo.arronharden.com/callback",
+    "region": "us-west-2",
+    "userPool": "us-west-2_jl4KaaF5v",
+    "userPoolBaseUri": "https://436-5.auth.us-west-2.amazoncognito.com",
+    "clientId": "624011g0jm0e0fug2ussrmopko",
+    "callbackUri": "http://localhost:3000/callback",
     "signoutUri": "https://cognito-demo.arronharden.com",
     "tokenScopes": [
         "openid",

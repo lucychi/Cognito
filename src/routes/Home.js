@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import logo from './logo.svg'
 import './Home.css'
 import { connect } from 'react-redux'
 import cognitoUtils from '../lib/cognitoUtils'
@@ -56,9 +55,9 @@ class Home extends Component {
     return (
       <div className="Home">
         <header className="Home-header">
-          <img src={logo} className="Home-logo" alt="logo" />
-          { this.props.session.isLoggedIn ? (
+          {this.props.session.isLoggedIn ? (
             <div>
+              <p>test</p>
               <p>You are logged in as user {this.props.session.user.userName} ({this.props.session.user.email}).</p>
               <p></p>
               <div>
@@ -66,11 +65,12 @@ class Home extends Component {
                 <div className="Home-api-response">{this.state.apiResponse}</div>
               </div>
               <p></p>
-              <a className="Home-link" href="#" onClick={this.onSignOut}>Sign out</a>
+              <a className="Home-link" href="/#" onClick={this.onSignOut}>Sign out</a>
             </div>
           ) : (
             <div>
-              <p>You are not logged in.</p>
+              <p>You are not logged in. Please login first</p>
+              <p>{cognitoUtils.getCognitoSignInUri()} </p>
               <a className="Home-link" href={cognitoUtils.getCognitoSignInUri()}>Sign in</a>
             </div>
           )}

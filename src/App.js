@@ -1,8 +1,5 @@
 import React from 'react'
-import {
-  Router,
-  Route
-} from 'react-router-dom'
+import {Router, Route} from 'react-router-dom'
 import Callback from './routes/Callback'
 import Home from './routes/Home'
 
